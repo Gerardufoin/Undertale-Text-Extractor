@@ -1,5 +1,4 @@
 #include <fstream>
-#include <vector>
 #include <iostream>
 
 #include "../include/Parser.h"
@@ -9,7 +8,7 @@ Parser::~Parser() {}
 
 void Parser::parseGameText(const std::string& outputFile, DWORD address, size_t size)
 {
-	std::vector<char> datas = _undertale.getDatas(address, size);
+	std::string datas = _undertale.getDatas(address, size);
 	std::ofstream file;
 	bool prevDebug = false;
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <vector>
+#include <string>
 #include <windows.h>
 
 class UndertaleProcess
@@ -9,7 +9,7 @@ public:
 	UndertaleProcess();
 	~UndertaleProcess();
 
-	std::vector<char> getDatas(DWORD address, size_t size);
+	std::string getDatas(DWORD address, size_t size);
 
 private:
 	HANDLE _handler;

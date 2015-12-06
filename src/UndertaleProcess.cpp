@@ -23,12 +23,12 @@ UndertaleProcess::UndertaleProcess()
 
 UndertaleProcess::~UndertaleProcess() {}
 
-std::vector<char> UndertaleProcess::getDatas(DWORD address, size_t size) {
+std::string UndertaleProcess::getDatas(DWORD address, size_t size) {
 	char* datas = new char[size];
 	SIZE_T read;
 
 	ReadProcessMemory(_handler, (void*)address, datas, size, &read);
-	std::vector<char> ret(datas, datas + read);
+	std::string ret(datas, datas + read);
 	delete[] datas;
 
 	return ret;
