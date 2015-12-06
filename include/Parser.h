@@ -1,6 +1,9 @@
 #pragma once
 
 #include <string>
+#include <vector>
+#include <regex>
+#include <utility>
 #include <windows.h>
 
 #include "../include/UndertaleProcess.h"
@@ -15,4 +18,5 @@ public:
 
 private:
 	UndertaleProcess _undertale;
+	std::vector< std::pair< std::regex, std::string > > _modifiers;
 };
